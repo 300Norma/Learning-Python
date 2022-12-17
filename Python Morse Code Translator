@@ -1,0 +1,96 @@
+# Morse Code Translator Project
+# Have ability to enter a string of characters and translate it.
+# Skills: If/else Inputs, Strings to Lists, Capitalize/Lowercase Lists, Replace/Remove Values in List, While Loops
+
+org = input('Enter input:')
+print(org, 'translates to')
+sec = list([*org])
+# print(sec)
+trans = [x.lower() for x in sec]
+for char in range(len(trans)):
+    if trans[char] == 'a':
+        trans[char] = '._'
+    if trans[char] == 'b':
+        trans[char] = '_...'
+    if trans[char] == 'c':
+        trans[char] = '_._.'
+    if trans[char] == 'd':
+        trans[char] = '_..'
+    if trans[char] == 'e':
+        trans[char] = '.'
+    if trans[char] == 'f':
+        trans[char] = '.._.'
+    if trans[char] == 'g':
+        trans[char] = '__.'
+    if trans[char] == 'h':
+        trans[char] = '....'
+    if trans[char] == 'i':
+        trans[char] = '..'
+    if trans[char] == 'j':
+        trans[char] = '.___'
+    if trans[char] == 'k':
+        trans[char] = '_._'
+    if trans[char] == 'l':
+        trans[char] = '._..'
+    if trans[char] == 'm':
+        trans[char] = '__'
+    if trans[char] == 'n':
+        trans[char] = '_.'
+    if trans[char] == 'o':
+        trans[char] = '___'
+    if trans[char] == 'p':
+        trans[char] = '.__.'
+    if trans[char] == 'q':
+        trans[char] = '__._'
+    if trans[char] == 'r':
+        trans[char] = '._.'
+    if trans[char] == 's':
+        trans[char] = '...'
+    if trans[char] == 't':
+        trans[char] = '_'
+    if trans[char] == 'u':
+        trans[char] = '.._'
+    if trans[char] == 'v':
+        trans[char] = '..._'
+    if trans[char] == 'w':
+        trans[char] = '.__'
+    if trans[char] == 'x':
+        trans[char] = '_.._'
+    if trans[char] == 'y':
+        trans[char] = '_.__'
+    if trans[char] == 'z':
+        trans[char] = '--..'
+    if trans[char] == '1':
+        trans[char] = '.____'
+    if trans[char] == '2':
+        trans[char] = '..___'
+    if trans[char] == '3':
+        trans[char] = '...__'
+    if trans[char] == '4':
+        trans[char] = '...._'
+    if trans[char] == '5':
+        trans[char] = '.....'
+    if trans[char] == '6':
+        trans[char] = '_....'
+    if trans[char] == '7':
+        trans[char] = '__...'
+    if trans[char] == '8':
+        trans[char] = '___..'
+    if trans[char] == '9':
+        trans[char] = '____.'
+    if trans[char] == '0':
+        trans[char] = '_____'
+    if trans[char] == '/':
+        trans[char] = '%'
+    if trans[char] == ' ':
+        trans[char] = '/'
+    if '.' not in trans[char] and '_' not in trans[char] and '/' not in trans[char]:
+        trans[char] = '+'
+while '+' in trans:
+    trans.remove('+')
+if trans[-1] == '/':
+    trans.pop()
+
+out = ' '.join([str(mor) for mor in trans])
+print(out)
+print('in Morse Code')
